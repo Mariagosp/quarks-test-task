@@ -1,0 +1,103 @@
+@import "../../styles/variables.scss";
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.63rem;
+  margin-bottom: 1.2rem;
+
+  &__logo {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__name {
+    font-size: 2.489rem;
+    font-weight: 600;
+    color: $primary;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+
+  margin-bottom: 4.2rem;
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: black;
+    &--highlight {
+      color: $primary;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-weight: 300;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+}
+
+.progress-section {
+  margin-bottom: 4.2rem;
+}
+
+.goals {
+  margin-bottom: 1.6rem;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 2.4rem;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #111111;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+    &--button {
+      width: 157.5px;
+      height: 63px;
+      padding: 14.5px 10px;
+      line-height: 120%;
+      font-family: "Nunito", sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      background-color: #ffffff;
+      border: 1px solid #d2cfdf;
+      border-radius: 10px;
+    }
+  }
+
+  &__other {
+    line-height: 120%;
+    font-family: "Nunito", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #111111;
+    text-decoration: underline;
+  }
+
+  &__policy {
+    font-weight: 300;
+    line-height: 120%;
+    font-size: 1.4rem;
+    color: #666666;
+    text-align: center;
+  }
+}

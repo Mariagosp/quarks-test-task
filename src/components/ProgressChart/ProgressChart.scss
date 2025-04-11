@@ -1,0 +1,61 @@
+.graph-wrapper {
+  position: relative;
+  // background: #f7f7fb;
+  // border: 1px solid black;
+  height: 19.7rem;
+  width: 32.7rem;
+  // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  // font-family: sans-serif;
+
+  .graph-caption {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.2rem;
+    color: #666666;
+    font-weight: 300;
+  }
+
+  .label {
+    position: absolute;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    &.you {
+      top: 100px;
+      left: 15px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 10px;
+        width: 12px;
+        height: 12px;
+        background: #fff;
+        border: 6px solid #7AC9ED;
+        border-radius: 50%;
+      }
+    }
+
+    &.goal {
+      top: 20px;
+      right: 20px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        right: 10px;
+        width: 12px;
+        height: 12px;
+        background: #fff;
+        border: 6px solid #195D74;
+        border-radius: 50%;
+      }
+    }
+  }
+}
