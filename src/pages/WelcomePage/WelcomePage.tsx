@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { Button } from "../../components/Button/Button";
+import { Header } from "../../components/Header/Header";
 import ProgressChart from "../../components/ProgressChart/ProgressChart";
 import "./WelcomePage.scss";
 
@@ -5,10 +8,11 @@ export const WelcomePage = () => {
   return (
     <>
       <div className="container">
-        <header className="header">
+        <Header />
+        {/* <header className="header">
           <img className="header__logo" src="/icons/logo.svg" alt="logo" />
           <h1 className="header__name">Affemity</h1>
-        </header>
+        </header> */}
         <section className="section">
           <h2 className="section__title">
             Change your{" "}
@@ -27,19 +31,26 @@ export const WelcomePage = () => {
           <div className="goals__container">
             <h3 className="goals__title">What is your main goal?</h3>
             <div className="goals__buttons">
-              <button className="goals__buttons--button">
+              <Link to='connection'>
+                <Button title="Build a deep connection" />
+              </Link>
+              <Link to='attraction'>
+              <Button title="Create emotional attraction" />
+              </Link>
+              {/* <button className="goals__buttons--button">
                 Build a deep connection
               </button>
               <button className="goals__buttons--button">
                 Create emotional attraction
-              </button>
+              </button> */}
             </div>
             <a href="#" className="goals__other">
               Other
             </a>
           </div>
           <p className="goals__policy">
-            By continuing, you agree to our Terms of Service | Privacy Policy <br />
+            By continuing, you agree to our Terms of Service | Privacy Policy{" "}
+            <br />
             2024 © All Rights Reserved.
           </p>
         </section>
