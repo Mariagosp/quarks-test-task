@@ -1,20 +1,18 @@
-.button__wrapper {
-  padding-block: 1.6rem;
-}
+@import '../../styles/variables.scss';
 
 .button-continue {
   width: 100%;
   height: 5rem;
-  background-color: #E8E6EF;
+  background-color: $secondary-gray;
   border: none;
   border-radius: 10px;
-  color: #B7B4C1;
+  color: $secondary-text;
   font-weight: 800;
   font-size: 1.8rem;
   line-height: 120%;
 
   &.active {
-    background-color: #31728D;
-    color: #FFFFFF
+    background-color: $primary;
+    color: $white;
   }
 }

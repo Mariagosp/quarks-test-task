@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .login-page {
   margin-top: 17px;
 }
@@ -17,7 +19,7 @@
     line-height: 120%;
 
     &::placeholder {
-      color: #b7b4c1;
+      color: $secondary-text;
       // font-weight: 300;
       // font-size: 1.6rem;
       // line-height: 120%;
@@ -25,18 +27,18 @@
 
     &:focus {
       outline: none;
-      background-color: #ffffff;
-      border: 1px solid #31728d;
-      color: #111111;
+      background-color: $white;
+      border: 1px solid $primary;
+      color: $primary-text;
     }
 
     &.unfilled {
-      background-color: #e8e6ef;
-      color: #b7b4c1;
+      background-color: $secondary-gray;
+      color: $secondary-text;
     }
 
     &.error-mes {
-      border-color: #EA6747;
+      border-color: $error;
     }
   }
 }
@@ -50,5 +52,24 @@
   font-weight: 700;
   font-size: 1rem;
   line-height: 120%;
-  color: #EA6747;
+  color: $error;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  &__logo {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 120%;
+    color: $gray-headline;
+  }
 }

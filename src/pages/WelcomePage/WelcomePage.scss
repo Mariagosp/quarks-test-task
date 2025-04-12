@@ -11,7 +11,7 @@
     margin: 0;
     font-weight: 700;
     font-size: 2.5rem;
-    color: black;
+    color: $primary-text;
     &--highlight {
       color: $primary;
     }
@@ -43,7 +43,7 @@
   &__title {
     font-weight: 700;
     font-size: 1.8rem;
-    color: #111111;
+    color: $primary-text;
   }
 
   &__buttons {
@@ -57,7 +57,7 @@
     font-family: "Nunito", sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #111111;
+    color: $primary-text;
     text-decoration: underline;
   }
 
@@ -65,7 +65,12 @@
     font-weight: 300;
     line-height: 120%;
     font-size: 1.4rem;
-    color: #666666;
+    color: $gray-headline;
     text-align: center;
   }
+}
+
+.at {
+  width: 15.75rem;
+  height: 6.3rem;
 }

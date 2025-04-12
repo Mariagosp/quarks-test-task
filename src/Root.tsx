@@ -7,9 +7,10 @@ import {
   Routes,
 } from "react-router-dom";
 import { WelcomePage } from "./pages/WelcomePage/WelcomePage";
-import { NotFoundPage } from "./pages/NotFoundAPage/NotFoundPage";
+import { NotFoundPage } from "./pages/NotFoundPage/NotFoundPage";
 import { SkillsPage } from "./pages/SkillsPage/SkillsPage";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
+import { PlanPage } from "./pages/PlanPage/PlanPage";
 
 export const Root = () => (
   <StrictMode>
@@ -20,6 +21,7 @@ export const Root = () => (
           <Route path="connection" element={<SkillsPage type='connection' />} />
           <Route path="attraction" element={<SkillsPage type='attraction' />} />
           <Route path="login" element={<LoginPage />} />
+          <Route path="plan" element={<PlanPage />} />
           <Route path="/home" element={<Navigate to="/" replace />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>

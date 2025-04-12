@@ -1,18 +1,16 @@
+@import '../../styles/variables.scss';
+
 .graph-wrapper {
   position: relative;
-  // background: #f7f7fb;
-  // border: 1px solid black;
   height: 19.7rem;
   width: 32.7rem;
-  // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  // font-family: sans-serif;
 
   .graph-caption {
     position: absolute;
     top: 10px;
     left: 10px;
     font-size: 1.2rem;
-    color: #666666;
+    color: $gray-headline;
     font-weight: 300;
   }
 
@@ -35,8 +33,8 @@
         left: 10px;
         width: 12px;
         height: 12px;
-        background: #fff;
-        border: 6px solid #7AC9ED;
+        background: $white;
+        border: 6px solid $secondary-blue;
         border-radius: 50%;
       }
     }
@@ -52,8 +50,8 @@
         right: 10px;
         width: 12px;
         height: 12px;
-        background: #fff;
-        border: 6px solid #195D74;
+        background: $white;
+        border: 6px solid $primary;
         border-radius: 50%;
       }
     }

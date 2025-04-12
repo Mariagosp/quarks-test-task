@@ -1,0 +1,67 @@
+@import '../../styles/variables.scss';
+
+.pop-up {
+  width: 27.2rem;
+  // height: 16.6rem;
+  background-color: $back-ground-color;
+  padding: 2rem;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  z-index: 1000;
+  max-width: 90%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    // line-height: 120%;
+
+    &--text {
+      font-size: 1.2rem;
+      color: $gray-headline;
+    }
+
+    &--title {
+      text-align: center;
+      font-size: 1.8rem;
+      color: $primary-text;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+
+    // width: 100%;
+    // max-width: 100%;
+    text-align: center;
+
+    // &--answer {
+    //   width: 100px;
+    //   text-align: center;
+    //   // width: 110px;
+    //   height: 4.8rem;
+    // }
+  }
+}
+
+.answer {
+  color: red;
+  width: 110px; /* Фиксированная ширина */
+  height: 48px; /* Фиксированная высота */
+  display: flex;
+  justify-content: center; /* Центрируем кнопку внутри div */
+  align-items: center; 
+}

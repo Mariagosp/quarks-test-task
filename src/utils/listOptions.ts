@@ -6,6 +6,7 @@ export const connectionOptions: Option[] = [
   { value: "option3", label: "Skill3_goal1", emoji: "⚡" },
   { value: "option4", label: "Skill4_goal1", emoji: "😌" },
   { value: "option5", label: "Skill5_goal1", emoji: "👍🏻" },
+  { value: "option6", label: "Skill6_goal1", emoji: "👍🏻" },
 ];
 
 export const attractionOptions: Option[] = [

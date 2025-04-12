@@ -6,18 +6,17 @@ import { debounce } from "lodash";
 import { useNavigate } from "react-router-dom";
 
 export const LoginPage = () => {
-
-  const [query, setQuery] = useState('');
-  const [error, setError] = useState('');
+  const [query, setQuery] = useState("");
+  const [error, setError] = useState("");
 
   const navigate = useNavigate();
 
   useEffect(() => {
     const validate = debounce(() => {
-      if (query && !query.includes('@')) {
+      if (query && !query.includes("@")) {
         setError("Email must include '@'");
       } else {
-        setError('');
+        setError("");
       }
     }, 500);
 
@@ -30,7 +29,7 @@ export const LoginPage = () => {
     e.preventDefault();
 
     if (query.length === 0) {
-      setError('Email is required');
+      setError("Email is required");
       return;
     }
 
@@ -38,9 +37,8 @@ export const LoginPage = () => {
       return;
     }
 
-    console.log('submit');
-    navigate('/');
-  }
+    navigate("/plan");
+  };
 
   return (
     <>
@@ -53,12 +51,12 @@ export const LoginPage = () => {
               Please enter your email to see results
             </p>
           </section>
-          <form className="form"
-            onSubmit={handleSubmit}
-          >
+          <form className="form" onSubmit={handleSubmit}>
             <input
               type="email"
-              className={`form__input ${!query ? 'unfilled' : ''} ${error ? 'error-mes' : ''}`}
+              className={`form__input ${!query ? "unfilled" : ""} ${
+                error ? "error-mes" : ""
+              }`}
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder="example@gmail.com"
@@ -67,50 +65,26 @@ export const LoginPage = () => {
           </form>
 
           <div className="button__container">
-            <MainButton title="Get results" isActive={true} onClick={handleSubmit} />
+            <MainButton
+              title="Get results"
+              isActive={true}
+              onClick={handleSubmit}
+            />
+          </div>
+
+          <div className="info">
+            <div className="info__logo">
+              <img className="info__logo" src="/icons/Group.svg" alt="logo" />
+            </div>
+
+            <p className="info__text">
+              We respect your privacy and are committed to protecting your
+              personal data. We’ll email you a copy of your results for
+              convenient access.
+            </p>
           </div>
         </div>
       </div>
     </>
   );
 };
-
-
-// const {
-  //   register,
-  //   handleSubmit,
-  //   setError,
-  //   watch,
-  //   clearErrors,
-  //   formState: { errors },
-  // } = useForm({
-  //   mode: "onChange",
-// });
-  
-// const onSubmit = () => {
-  //   if (!email) {
-  //     setError("email", { message: "Email is required" });
-  //     return;
-  //   }
-
-  //   if (errors) {
-  //     return;
-  //   }
-
-  //   console.log("submitted");
-  //   navigate("/");
-// };
-  
-// useEffect(() => {
-  //   const validate = debounce(() => {
-  //     if (email.length > 0 && !email.includes("@")) {
-  //       setError("email", { message: "Email must include '@'" });
-  //     } else {
-  //       clearErrors("email");
-  //     }
-  //   }, 500);
-
-  //   validate();
-
-  //   return () => validate.cancel();
-  // }, [email, setError, clearErrors]);
