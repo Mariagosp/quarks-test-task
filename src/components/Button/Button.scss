@@ -13,4 +13,8 @@
   background-color: #ffffff;
   border: 1px solid #d2cfdf;
   border-radius: 10px;
+
+  &:active {
+    border-color: #31728D;
+  }
 }

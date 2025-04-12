@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Header } from "../../components/Header/Header";
 import "./SkillsPage.scss";
 import CustomSelect from "../../components/CustomSelect/CustomSelect";
@@ -23,6 +23,10 @@ export const SkillsPage: React.FC<Props> = ({ type }) => {
         : [...prev, value]
     );
   };
+
+  const handleClick = () => {
+    navigate('/login');
+  }
 
   return (
     <>
@@ -57,19 +61,9 @@ export const SkillsPage: React.FC<Props> = ({ type }) => {
           selectedOptions={selectedOptions}
           handleSelectChange={handleSelectChange}
         />
-        <Link to="/login">
           <div className="button__wrapper">
-            <MainButton title="Continue" isActive={selectedOptions.length > 0} />
-            {/* <button
-              disabled={selectedOptions.length === 0}
-              className={`button-continue ${
-                selectedOptions.length > 0 ? "active" : ""
-              }`}
-            >
-              Continue
-            </button> */}
+            <MainButton title="Continue" isActive={selectedOptions.length > 0} onClick={handleClick} />
           </div>
-        </Link>
       </div>
     </>
   );
