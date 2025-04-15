@@ -47,3 +47,4 @@ Each screen is rendered based on user input using React Router for smooth naviga
 
 The app is deployed on GitHub Pages. You can view the live version here:  
 👉 **[Live Demo](https://mariagosp.github.io/quarks-test-task/)**
+
