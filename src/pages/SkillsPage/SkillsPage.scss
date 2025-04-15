@@ -3,7 +3,7 @@
 .page-wrapper {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 12px - 16px); // 100vh мінус top+bottom padding container'а
+  height: calc(100vh - 12px - 16px);
 }
 
 .scrollable-content {
@@ -34,7 +34,6 @@
   &__progress-bar {
     height: 100%;
     background-color: $primary;
-    // width: 20%;
     animation: growBar .7s ease-in-out forwards;
   }
 
@@ -43,7 +42,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    // height: 40px;
     &--arrow {
       width: 40px;
       height: 40px;
@@ -108,12 +106,9 @@
 .options-wrapper {
   flex: 1;
   overflow-y: auto;
-  // padding-right: 4px; 
 }
 
 .button__wrapper {
-  // padding-top: 1.6rem;
-  // padding-bottom: env(safe-area-inset-bottom); // для iPhone
   position: sticky;
   bottom: 0;
   padding: 1.6rem 0 env(safe-area-inset-bottom);

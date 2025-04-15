@@ -1,23 +1,19 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/Button/Button";
 import { Header } from "../../components/Header/Header";
-import ProgressChart from "../../components/ProgressChart/ProgressChart";
+import { ProgressChart } from "../../components/ProgressChart/ProgressChart";
 import "./WelcomePage.scss";
 
 export const WelcomePage = () => {
   const navigate = useNavigate();
 
   const handleClick = (path: string) => {
-    navigate(`${path}`)
-  }
+    navigate(`${path}`);
+  };
   return (
     <>
       <div className="container">
         <Header />
-        {/* <header className="header">
-          <img className="header__logo" src="/icons/logo.svg" alt="logo" />
-          <h1 className="header__name">Affemity</h1>
-        </header> */}
         <section className="section">
           <h2 className="section__title">
             Change your{" "}
@@ -36,23 +32,19 @@ export const WelcomePage = () => {
           <div className="goals__container">
             <h3 className="goals__title">What is your main goal?</h3>
             <div className="goals__buttons">
-              <div className="at">
-                {/* <Link to="connection"> */}
-                  <Button title="Build a deep connection" onClick={() => handleClick('connection')} />
-                {/* </Link> */}
+              <div className="welcome-button">
+                <Button
+                  title="Build a deep connection"
+                  onClick={() => handleClick("connection")}
+                />
               </div>
 
-              <div className="at">
-                {/* <Link to="attraction"> */}
-                  <Button title="Create emotional attraction" onClick={() => handleClick('attraction')} />
-                {/* </Link> */}
+              <div className="welcome-button">
+                <Button
+                  title="Create emotional attraction"
+                  onClick={() => handleClick("attraction")}
+                />
               </div>
-              {/* <button className="goals__buttons--button">
-                Build a deep connection
-              </button>
-              <button className="goals__buttons--button">
-                Create emotional attraction
-              </button> */}
             </div>
             <a href="#" className="goals__other">
               Other

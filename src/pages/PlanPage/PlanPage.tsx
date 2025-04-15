@@ -9,6 +9,7 @@ import { goals } from "../../utils/goals";
 import "./PlanPage.scss";
 
 import { useEffect, useState } from "react";
+import { ReviewsSwiper } from "../../components/ReviewsSwiper/ReviewsSwiper";
 
 export const PlanPage = () => {
   const [progress, setProgress] = useState<Record<GoalKey, number>>({
@@ -31,7 +32,6 @@ export const PlanPage = () => {
     }
 
     const interval = setInterval(() => {
-      // const currentBarKey = goals[currentBarIndex].key; // goals
       if (currentBarIndex >= goals.length) {
         clearInterval(interval);
         return;
@@ -47,7 +47,6 @@ export const PlanPage = () => {
 
         const newProgress = { ...prev };
         newProgress[currentBarKey] = Math.min(prev[currentBarKey] + 2, 100);
-        // const newPercentValue = Math.min(prev[currentBarKey] + 2, 100);
 
         if (newProgress[currentBarKey] === 50) {
           setPaused(true);
@@ -90,10 +89,14 @@ export const PlanPage = () => {
             We are crafting your personalized plan
           </h1>
           <ProgressBar goals={goals} progress={progress} />
+          <span className="reviews__wrapper">
+            <ReviewsSwiper />
+          </span>
         </div>
       </div>
 
-      {showPopUp && (
+      {showPopUp 
+        && (
         <>
           <div className="overlay"></div>
           <PopUp title={popUpTitle} onContinue={handleContinue} />

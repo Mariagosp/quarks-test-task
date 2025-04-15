@@ -1,6 +1,13 @@
+import { Link } from "react-router-dom";
+import "./NotFoundPage.scss";
+
 export const NotFoundPage = () => {
   return (
     <>
-    <h1>Not Found</h1></>
-  )
-}
+      <div className="container">
+        <h1>NOT FOUND</h1>
+        <Link to="/">Go home</Link>
+      </div>
+    </>
+  );
+};

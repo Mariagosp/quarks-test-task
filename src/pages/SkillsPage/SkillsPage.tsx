@@ -31,7 +31,6 @@ export const SkillsPage: React.FC<Props> = ({ type }) => {
   return (
     <>
       <div className="container">
-        {/* <h1>{type === "connection" ? "connection" : "attraction"}</h1> */}
         <div className="page-wrapper">
           <div className="scrollable-content">
             <div className="head">
@@ -61,11 +60,6 @@ export const SkillsPage: React.FC<Props> = ({ type }) => {
               <p className="headline__text">Select all that apply</p>
             </section>
 
-            {/* <CustomSelect
-              options={options}
-              selectedOptions={selectedOptions}
-              handleSelectChange={handleSelectChange}
-            /> */}
             <div className="options-wrapper">
               <CustomSelect
                 options={options}

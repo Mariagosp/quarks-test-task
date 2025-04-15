@@ -1,0 +1,11 @@
+@import "../../styles/variables.scss";
+
+.swiper {
+  max-width: 1500px;
+  margin: 0 auto; 
+
+  &--wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}

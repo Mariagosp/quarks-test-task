@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .graph-wrapper {
   position: relative;
@@ -7,53 +7,16 @@
 
   .graph-caption {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    bottom: 17.1rem;
+    left: 1rem;
     font-size: 1.2rem;
     color: $gray-headline;
     font-weight: 300;
   }
+}
 
-  .label {
-    position: absolute;
-    padding: 4px 10px;
-    border-radius: 8px;
-    font-size: 12px;
-    font-weight: bold;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
-    &.you {
-      top: 100px;
-      left: 15px;
-
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 10px;
-        width: 12px;
-        height: 12px;
-        background: $white;
-        border: 6px solid $secondary-blue;
-        border-radius: 50%;
-      }
-    }
-
-    &.goal {
-      top: 20px;
-      right: 20px;
-
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        right: 10px;
-        width: 12px;
-        height: 12px;
-        background: $white;
-        border: 6px solid $primary;
-        border-radius: 50%;
-      }
-    }
-  }
+.line {
+  position: absolute;
+  bottom: 7.3rem;
+  left: 3.4rem;
 }

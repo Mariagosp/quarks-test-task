@@ -1,0 +1,51 @@
+@import '../../styles/variables.scss';
+
+.slider__item {
+  padding: 1.2rem 1.6rem;
+
+  border-radius: 10px;
+  background-color: $white;
+  border: 1px solid $secondary;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  &--head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &--author {
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 120%;
+      color: $gray-headline;
+    }
+
+    &--review {
+      display: flex;
+      flex-direction: row;
+      gap: 0.8rem;
+      &--stars {
+        width: 8.7rem;
+        height: 1.6rem;
+      }
+
+      &--rating {
+        font-weight: 300;
+        font-size: 1.2rem;
+        line-height: 120%;
+        color: $gray-headline;
+      }
+    }
+  }
+
+  &--text {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 120%;
+    color: $primary-text;
+    text-align: left;
+  }
+}

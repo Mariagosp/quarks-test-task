@@ -28,6 +28,9 @@
 
 .progress-section {
   margin-block: 4.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .goals {
@@ -70,7 +73,7 @@
   }
 }
 
-.at {
+.welcome-button {
   width: 15.75rem;
   height: 6.3rem;
 }

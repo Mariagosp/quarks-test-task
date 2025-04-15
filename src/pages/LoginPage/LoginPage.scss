@@ -1,11 +1,25 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .login-page {
+  max-width: 800px;
+  margin: 0 auto;
   margin-top: 17px;
+}
+
+.form__row {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .form {
   margin-top: 1.2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &__input {
     height: 4.8rem;
@@ -20,9 +34,10 @@
 
     &::placeholder {
       color: $secondary-text;
-      // font-weight: 300;
-      // font-size: 1.6rem;
-      // line-height: 120%;
+    }
+
+    &.error-mes {
+      border: 1px solid $error;
     }
 
     &:focus {
@@ -36,15 +51,15 @@
       background-color: $secondary-gray;
       color: $secondary-text;
     }
-
-    &.error-mes {
-      border-color: $error;
-    }
   }
 }
 
 .button__container {
   margin-block: 1.2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .error {
@@ -53,6 +68,8 @@
   font-size: 1rem;
   line-height: 120%;
   color: $error;
+
+  text-align: left;
 }
 
 .info {

@@ -52,16 +52,18 @@ export const LoginPage = () => {
             </p>
           </section>
           <form className="form" onSubmit={handleSubmit}>
-            <input
-              type="email"
-              className={`form__input ${!query ? "unfilled" : ""} ${
-                error ? "error-mes" : ""
-              }`}
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder="example@gmail.com"
-            />
-            {error && <p className="error">{error}</p>}
+            <div className="form__row">
+              <input
+                type="email"
+                className={`form__input ${!query ? "unfilled" : ""} ${
+                  error ? "error-mes" : ""
+                }`}
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder="example@gmail.com"
+              />
+              {error && <p className="error">{error}</p>}
+            </div>
           </form>
 
           <div className="button__container">
