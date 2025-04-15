@@ -77,6 +77,7 @@ export const PlanPage = () => {
   const popUpTitle = getPopUpTitle(goals[currentBarIndex]?.key);
 
   if (progress.challenges === 100) {
+    console.log(userAnswers);
     navigate('/');
   }
 
