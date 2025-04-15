@@ -1,54 +1,50 @@
-# React + TypeScript + Vite
+# 💡 Affemity Landing Quiz – React Implementation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a responsive, interactive multi-screen landing page implemented with React. It guides users through a short quiz to personalize their experience, based on a Figma design provided by the Quarks team.
 
-Currently, two official plugins are available:
+## 🚀 Project Overview
+The app consists of four main screens:
+1. **Welcome Screen** – the entry point with two user paths (connection VS attraction).
+2. **Skills Selection** – renders different sets of options depending on the chosen path.
+3. **Email Submission/Login** – includes custom validation for @ and an empty string with throttled input.
+4. **Loading Screen** – includes animated progress bars and swiper with users' reviews.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Each screen is rendered based on user input using React Router for smooth navigation between steps.
 
-## Expanding the ESLint configuration
+## 🧩 Key Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Conditional Navigation Flow**
+  - Branching logic is implemented based on the user’s first choice.
+  - The subsequent “Skills” screen adapts dynamically.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Custom Email Validation**
+  - Real-time validation with 500ms throttling.
+  - Checks for `@` presence and empty field.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Loading Screen Animation**
+  - Progress bars animate to 50%, pause, and display a modal with a question.
+  - After selecting an option, the animation continues to 100%.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Testimonial Auto-swiper**
+  - Animated carousel with automatic swipe.
+  - Seamless loop effect, mobile-friendly.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **Responsive Design**
+  - Layout and typography adapt across screen sizes.
+  - All units are based on `rem` for scalable sizing.
+
+## 🛠️ Stack
+
+- **React** (with functional components)
+- **React Router DOM** – screen-based navigation
+- **SCSS** – styling and responsiveness
+- **TypeScript** – types
+- **Recharts** - for a chart
+- **slick-carousel** - auto-swiper
+- **GitHub Pages** – for deployment
+
+## 🌐 Deployment
+
+The app is deployed on GitHub Pages. You can view the live version here:  
+👉 **[Live Demo](https://mariagosp.github.io/quarks-test-task/)**
+
