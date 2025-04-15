@@ -76,7 +76,7 @@ export const LoginPage = () => {
 
           <div className="info">
             <div className="info__logo">
-              <img className="info__logo" src="/icons/Group.svg" alt="logo" />
+              <img className="info__logo" src="./icons/Group.svg" alt="logo" />
             </div>
 
             <p className="info__text">

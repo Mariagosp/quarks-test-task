@@ -22,4 +22,10 @@
 .reviews__wrapper {
   margin-top: 17.5rem;
   width: 100%;
+
+  @media (min-width: 480px) {
+    & {
+      margin-top: 14.5rem;
+    }
+  }
 }

@@ -13,7 +13,7 @@ export const ReviewCard: React.FC<Props> = ({ review }) => {
           <h3 className="slider__item--head--author">{review.author}</h3>
           <div className="slider__item--head--review">
             <img
-              src="/icons/stars.svg"
+              src="./icons/stars.svg"
               alt="stars"
               className="slider__item--head--review--stars"
             />

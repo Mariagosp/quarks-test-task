@@ -43,7 +43,7 @@ export const SkillsPage: React.FC<Props> = ({ type }) => {
                   onClick={() => navigate("/")}
                 >
                   <img
-                    src="/icons/arrow-left.svg"
+                    src="./icons/arrow-left.svg"
                     alt="arrow left"
                     className="head__nav--arrow--img"
                   />
